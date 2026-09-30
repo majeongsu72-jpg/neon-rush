@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="NEON RUSH — 네온 질주: 모든 그래픽과 사운드를 코드로 생성한 초고속 아케이드 레이싱" />
+    <title>Neon Rush</title>
+    <style>
+      :root {
+        --bg: #05040b;
+        --fg: #eef2ff;
+        --accent: #19f5ff;
+        --accent-2: #ff2bd6;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme='light']) {
+          --bg: #05040b;
+          --fg: #eef2ff;
+        }
+      }
+      :root[data-theme='dark'] {
+        --bg: #05040b;
+        --fg: #eef2ff;
+      }
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        background: var(--bg);
+        color: var(--fg);
+      }
+      #app {
+        position: fixed;
+        inset: 0;
+      }
+      #gl {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="gl" tabindex="0"></canvas>
+      <div id="ui"></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
